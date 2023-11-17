@@ -1,6 +1,5 @@
-import './style.css'
-import covidData from './covid-data'
-import processData from './process-data.js'
+import covidData from './covid-data.js';
+import processData from './process-data.js';
 
 processData(covidData)
 
