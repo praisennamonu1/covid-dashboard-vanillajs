@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!-- Add your HTML code here -->
+    <div id="app">
+      <h1>COVID-19 Statistics</h1>
+      <div class="choice">
+        <button id="fullStats">View Full stats</button>
+        <button id="filterStats">Filter stats</button>
+      </div>
+    </div>
+    <div class="filterStats">
+      <div class="countryFilter">
+        <label for="countryFilter">Filter by Country:</label>
+        <input type="text" id="countryFilter" placeholder="Enter country name">
+      </div>
+      <div class="dateFilter">
+        <label for="dateFilter">Filter by Date:</label>
+        <select id="dateFilter">
+            <option value="0">All Dates</option>
+            <option value="2021-07">July 2021</option>
+            <option value="2021-08">August 2021</option>
+            <option value="2021-09">September 2021</option>
+            <option value="2021-10">October 2021</option>
+            <option value="2021-11">November 2021</option>
+            <option value="2021-12">December 2021</option>
+            <option value="2022-01">January 2022</option>
+            <option value="2022-02">February 2022</option>
+            <option value="2022-03">March 2022</option>
+            <option value="2022-04">April 2022</option>
+            <option value="2022-05">May 2022</option>
+            <option value="2022-06">June 2022</option>
+        </select>
+      </div>
+      
+      <hr>
+
+      <table id="covidTable">
+        <thead>
+          <tr>
+            <th class="sortable-header" data-sort="country">Country</th>
+            <th class="sortable-header" data-sort="lastUpdated">Time Updated</th>
+            <th class="sortable-header" data-sort="totalCases">Total Cases</th>
+            <th class="sortable-header" data-sort="totalDeaths">Total Deaths</th>
+            <th class="sortable-header" data-sort="totalRecoveries">Total Recoveries</th>
+          </tr>
+        </thead>
+        <tbody id="first">
+          <!-- Data rows -->
+        </tbody>
+        <tbody id="second">
+          <!-- Filtered Data rows here -->
+        </tbody>
+      </table>
+    </div>
+    <div class="fullStats">
+      <table id="covidStats">
+        <thead>
+          <tr>
+            <th class="sortable-header" data-sort="country">Country</th>
+            <th class="sortable-header" data-sort="lastUpdated">Time</th>
+            <th class="sortable-header" data-sort="totalCases">Total Cases</th>
+            <th class="sortable-header" data-sort="totalDeaths">Total Deaths</th>
+            <th class="sortable-header" data-sort="totalRecoveries">Total Recoveries</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
